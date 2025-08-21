@@ -1,38 +1,38 @@
 {
   "users": [
     {
-      "username": "1",
-      "password": "1"
+      "username": "2",
+      "password": "2"
     },
     {
-      "username": "user",
-      "password": "12345"
+      "username": "guest",
+      "password": "guestpass"
     }
   ],
   "products": [
     {
-      "companyName": "شركة الخزف",
+      "companyName": "بورسلين الفخامة",
       "productId": "PRCL001",
-      "quantity": 150,
-      "imageUrl": "https://placehold.co/100x100/AEC6CF/000000?text=PRCL001"
+      "quantity": 250,
+      "imageUrl": "https://placehold.co/120x120/FFFAF0/000000?text=PORC+001"
     },
     {
-      "companyName": "بورسلين الإبداع",
+      "companyName": "شركة الجمال",
       "productId": "PRCL002",
-      "quantity": 220,
-      "imageUrl": "https://placehold.co/100x100/FFD700/000000?text=PRCL002"
+      "quantity": 180,
+      "imageUrl": "https://placehold.co/120x120/E0FFFF/000000?text=PORC+002"
     },
     {
-      "companyName": "الشرق للبورسلين",
+      "companyName": "الشرق الحديث",
       "productId": "PRCL003",
-      "quantity": 90,
-      "imageUrl": "https://placehold.co/100x100/98FB98/000000?text=PRCL003"
+      "quantity": 310,
+      "imageUrl": "https://placehold.co/120x120/FFE4B5/000000?text=PORC+003"
     },
     {
-      "companyName": "روائع البورسلين",
+      "companyName": "أرض البورسلين",
       "productId": "PRCL004",
-      "quantity": 300,
-      "imageUrl": "https://placehold.co/100x100/FF6347/FFFFFF?text=PRCL004"
+      "quantity": 120,
+      "imageUrl": "https://placehold.co/120x120/D8BFD8/000000?text=PORC+004"
     }
   ]
 }
