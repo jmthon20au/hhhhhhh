@@ -4,7 +4,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__, static_folder='.', static_url_path='')
-CORS(app) # تمكين CORS للسماح لطلبات JavaScript من المتصفح بالوصول إلى الخادم
+CORS(app, resources={r"/*": {"origins": ["https://hhhhhhhh-production.up.railway.app", "https://jmthon20au.github.io/hhhhhhh/"]}})# تمكين CORS للسماح لطلبات JavaScript من المتصفح بالوصول إلى الخادم
 
 DATA_FILE = 'data.json'
 
