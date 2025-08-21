@@ -152,7 +152,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>تسجيل الدخول - إدارة المخزن</h2>
+        <h2>تسجيل الدخول - إدارة مخزن البورسلين</h2>
         <div class="input-group">
             <i class="fas fa-user icon"></i>
             <input type="text" id="username" placeholder="اسم المستخدم" required>
@@ -168,6 +168,11 @@
     </div>
 
     <script>
+        // *** مهم جداً: استبدل هذا الرابط برابط الـ Backend الفعلي بعد الرفع على Railway ***
+        // مثال: const API_BASE_URL = 'https://your-railway-app-name-xxxx.up.railway.app';
+        // للتشغيل المحلي، اتركه كما هو: 'http://127.0.0.1:5000'
+        const API_BASE_URL = 'http://127.0.0.1:5000'; 
+
         document.getElementById('loginButton').addEventListener('click', async () => {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
@@ -176,7 +181,7 @@
             errorMessage.classList.add('hidden'); // إخفاء الرسالة القديمة
 
             try {
-                const response = await fetch('https://hhhhhhhh-production.up.railway.app', {
+                const response = await fetch(`${API_BASE_URL}/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -193,12 +198,21 @@
                         errorMessage.classList.remove('hidden');
                     }
                 } else {
-                    const errorData = await response.json();
-                    errorMessage.textContent = errorData.message || 'خطأ في الاتصال بالخادم.';
+                    // إذا لم تكن الاستجابة 200 OK
+                    let errorText = 'خطأ في الاتصال بالخادم.';
+                    try {
+                        const errorData = await response.json();
+                        errorText = errorData.message || errorText;
+                    } catch (e) {
+                        // إذا لم تكن الاستجابة JSON
+                        errorText = `خطأ: ${response.status} ${response.statusText}`;
+                    }
+                    errorMessage.textContent = errorText;
                     errorMessage.classList.remove('hidden');
                 }
             } catch (error) {
-                errorMessage.textContent = 'حدث خطأ غير متوقع: ' + error.message;
+                // هذا الخطأ يحدث إذا لم يتمكن المتصفح من الوصول إلى الخادم على الإطلاق (Failed to fetch)
+                errorMessage.textContent = 'تعذر الاتصال بالخادم. تأكد من أن الخادم يعمل وأن الرابط صحيح: ' + API_BASE_URL;
                 errorMessage.classList.remove('hidden');
             }
         });
