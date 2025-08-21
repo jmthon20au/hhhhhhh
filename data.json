@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "username": "1",
+      "password": "1"
+    },
+    {
+      "username": "user",
+      "password": "12345"
+    }
+  ],
+  "products": [
+    {
+      "companyName": "شركة الخزف",
+      "productId": "PRCL001",
+      "quantity": 150,
+      "imageUrl": "https://placehold.co/100x100/AEC6CF/000000?text=PRCL001"
+    },
+    {
+      "companyName": "بورسلين الإبداع",
+      "productId": "PRCL002",
+      "quantity": 220,
+      "imageUrl": "https://placehold.co/100x100/FFD700/000000?text=PRCL002"
+    },
+    {
+      "companyName": "الشرق للبورسلين",
+      "productId": "PRCL003",
+      "quantity": 90,
+      "imageUrl": "https://placehold.co/100x100/98FB98/000000?text=PRCL003"
+    },
+    {
+      "companyName": "روائع البورسلين",
+      "productId": "PRCL004",
+      "quantity": 300,
+      "imageUrl": "https://placehold.co/100x100/FF6347/FFFFFF?text=PRCL004"
+    }
+  ]
+}
